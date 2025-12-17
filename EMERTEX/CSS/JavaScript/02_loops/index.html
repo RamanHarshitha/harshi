@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Loops</h2>
+    <script>
+      /*let i = 0;
+      while (i < 4) {
+        i = i + 1;
+        console.log(i);
+        
+      }
+      console.log(i);
+      j = 0;
+      do {
+        j = j + 1;
+        console.log(j);
+      } while (j < 4);*/
+
+      /*for (let i = 0; i < 4; i++) {
+        console.log(i);
+      }
+      //console.log(i);
+
+      //print all even numbers between 10 to 30
+      for (let i = 10; i <= 30; i++) {
+        if (i % 2 === 0) {
+          //if 3=="3":true and so === is used for strict comparison
+          console.log(`${i}, `);
+        }
+      }
+        */
+      let fruits = ["Apple", "mango", "banana", "pineapple"];
+      for (let a = 0; a < fruits.length; a++) {
+        console.log(fruits[a]);
+      }
+      const [fruit1, fruit2, fruit3, fruit4] = fruits; //destructuring
+      console.log(fruit1);
+      const [fruit, ...rest] = fruits;
+      console.log(fruit);
+      console.log(rest);
+      let abc = [1, 2, 3, 4];
+      let xyz = [5, 6, 7];
+      let def = [...abc, ...xyz];
+      console.log(def);
+      //destructuring of objects;
+      let obj = {
+        name: "rabbit",
+        type: "carnivore",
+        color: "white",
+      };
+      let { name: animalname, type, color, pop = 1 } = obj;
+      console.log(animalname);
+      let rabbit = { ...obj };
+      console.log(rabbit);
+    </script>
+  </body>
+</html>
