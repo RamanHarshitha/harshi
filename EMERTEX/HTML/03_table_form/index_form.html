@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" />
+      <br />
+      <br />
+      <lable for="user"
+        >Username:<input type="text" placeholder="harshi" id="user"
+      /></lable>
+      <br />
+      <br />
+      <label for="email"
+        >Email:<input
+          type="email"
+          id="email"
+          placeholder="ramanharshi@gmail.com"
+      /></label>
+      <br />
+      <br />
+      <label for="pass"
+        >Password:<input type="password" id="pass" required
+      /></label>
+      <br />
+      <label for="male">Male:<input type="radio" name="gender" /></label>
+      <label for="female">Female:<input type="radio" name="gender" /></label>
+      <label for="foods">Choose ur fav food</label>
+      <input list="foods" />
+      <datalist id="foods">
+        <option value="Ice">Ice</option>
+        <option value="dosa">Dosa</option>
+        <option value="idly">Idlli</option></datalist
+      ><br />
+      <label for="cars">Cars:</label>
+      <select id="cars">
+        <option value="swift">Swift</option>
+        <option value="alto">Alto</option>
+        <option value="benz">Benz</option>
+      </select>
+      <label
+        >Phone:<select>
+          <option value="india">+91</option>
+          <option value="kuwaiut">+957</option></select
+        ><input type="number" />
+      </label>
+      <br />
+      <label>ID:<input type="file" accept=".pdf,.jpg" /></label>
+      <br />
+      <button type="submit">Submit</button>
+      <br />
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
