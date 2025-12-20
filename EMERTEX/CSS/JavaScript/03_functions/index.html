@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Functions</h2>
+    <script>
+      //function declaration
+      function sum(a, b = 1) {
+        return a + b;
+      }
+      console.log(sum(4, 5));
+      console.log(sum(4));
+      console.log(sum());
+
+      //function expression
+      /* let greet = function () {
+        console.log("hellooo");
+      };
+      greet();
+        */
+      //arrow functions
+      let meet = () => {
+        return "lets Meet";
+      };
+      console.log(meet());
+      //using rest operator
+      function sum(...param) {
+        console.log(param);
+        let sum = 0;
+        for (let i = 0; i < param.length; i++) {
+          sum = sum + param[i];
+        }
+        return sum;
+      }
+      console.log(sum(4, 5, 1));
+
+      //Function written inside object is method
+      /*let student1 = {
+        name: "harshi",
+        lastname: "raman",
+        branch: "cse",
+        birthyear: "2005",
+        calcAge: function () {
+          return 2035 - student1.birthyear;
+        },
+      };
+      console.log(student1.calcAge());*/
+
+      let student1 = {
+        fname: "harshi",
+        lname: "kant",
+        birthyear: 2003,
+        calcAge: function () {
+          return 2035 - this.birthyear;
+        },
+        fullname: function () {
+          return this.fname + "" + this.lname;
+        },
+      };
+      console.log(student1.calcAge());
+      let student2 = { ...student1 };
+      student2.birthyear = 2010;
+      student2.fname = "salma";
+      console.log(student2.fullname());
+      console.log(student2.calcAge());
+      console.log(student1.fullname());
+      //function returning another function
+      let greet = function (greeting) {
+        "use strict";
+        return function (name) {
+          console.log(`${greeting} ${name}`);
+        };
+      };
+      greet("good morning")("rohit");
+    </script>
+  </body>
+</html>
